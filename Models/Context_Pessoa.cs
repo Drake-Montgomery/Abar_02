@@ -6,8 +6,9 @@ namespace Abar.Models
     {
         public Context_Pessoa(DbContextOptions<Context_Pessoa> options) : base(options)
         {
+            Database.EnsureCreated();
         }
-       public DbSet<Pessoa> ? Pessoa { get; set; }
+        public DbSet<Pessoa> ? Pessoa { get; set; }
        public DbSet<Login>? Login { get; set; }
     }
 }
